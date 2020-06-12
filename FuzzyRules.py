@@ -303,36 +303,59 @@ def setRules (skor_FM, skor_FA, skor_FK):
         #az32 = round((alpha32 * z32), 3)
         #alpha_z.append(az32)
     
-    #RULE : 
-    #alpha = min(fm._motivation(skor_FM), fa._academic(skor_FA), fk._lethargy(skor_FK))
-    #if alpha != 0:
-        #pre_alpha.append(alpha)
-        #z = zr.z_(alpha)
-        #z_rule.append(z)
-        #az = round((alpha * z), 3)
-        #alpha_z.append(az)
+    #RULE 33: HIGH - LOW - LOW = HIGH 
+    alpha33 = min(fm.high_motivation(skor_FM), fa.low_academic(skor_FA), fk.low_lethargy(skor_FK))
+    if alpha33 != 0:
+        pre_alpha.append(alpha33)
+        z33 = zr.z_high(alpha33)
+        z_rule.append(z33)
+        az33 = round((alpha33 * z33), 3)
+        alpha_z.append(az33)
     
-    #RULE : 
-    #alpha = min(fm._motivation(skor_FM), fa._academic(skor_FA), fk._lethargy(skor_FK))
-    #if alpha != 0:
-        #pre_alpha.append(alpha)
-        #z = zr.z_(alpha)
-        #z_rule.append(z)
-        #az = round((alpha * z), 3)
-        #alpha_z.append(az)
+    #RULE 34: HIGH - LOW - MODERATE = HIGH 
+    alpha34 = min(fm.high_motivation(skor_FM), fa.low_academic(skor_FA), fk.moderate_lethargy(skor_FK))
+    if alpha34 != 0:
+        pre_alpha.append(alpha34)
+        z34 = zr.z_high(alpha34)
+        z_rule.append(z34)
+        az34 = round((alpha34 * z34), 3)
+        alpha_z.append(az34)
     
-    #RULE : 
-    #alpha = min(fm._motivation(skor_FM), fa._academic(skor_FA), fk._lethargy(skor_FK))
-    #if alpha != 0:
-        #pre_alpha.append(alpha)
-        #z = zr.z_(alpha)
-        #z_rule.append(z)
-        #az = round((alpha * z), 3)
-        #alpha_z.append(az)
+    #RULE 35: HIGH - LOW - HIGH = SEVERE 
+    alpha35 = min(fm.high_motivation(skor_FM), fa.low_academic(skor_FA), fk.high_lethargy(skor_FK))
+    if alpha35 != 0:
+        pre_alpha.append(alpha35)
+        z35 = zr.z_severe(alpha35)
+        z_rule.append(z35)
+        az35 = round((alpha35 * z35), 3)
+        alpha_z.append(az35)
     
+    #RULE 36: HIGH - LOW - SEVERE = SEVERE  
+    alpha36 = min(fm.high_motivation(skor_FM), fa.low_academic(skor_FA), fk.severe_lethargy(skor_FK))
+    if alpha36 != 0:
+        pre_alpha.append(alpha36)
+        z36 = zr.z_severe(alpha36)
+        z_rule.append(z36)
+        az36 = round((alpha36 * z36), 3)
+        alpha_z.append(az36)
+        
+    #RULE 37: HIGH - MODERATE - LOW = HIGH  
+    alpha37 = min(fm.high_motivation(skor_FM), fa.moderate_academic(skor_FA), fk.low_lethargy(skor_FK))
+    if alpha37 != 0:
+        pre_alpha.append(alpha37)
+        z37 = zr.z_severe(alpha37)
+        z_rule.append(z37)
+        az37 = round((alpha37 * z37), 3)
+        alpha_z.append(az37)
     
-    
-    
+    #RULE 38: HIGH - MODERATE - MODERATE = HIGH
+    alpha38 = min(fm.high_motivation(skor_FM), fa.moderate_academic(skor_FA), fk.moderate_lethargy(skor_FK))
+    if alpha38 != 0:
+        pre_alpha.append(alpha38)
+        z38 = zr.z_high(alpha38)
+        z_rule.append(z38)
+        az38 = round((alpha38 * z38), 3)
+        alpha_z.append(az38)
     
     #RULE 39: HIGH - MODERATE - HIGH = HIGH
     alpha39 = min(fm.high_motivation(skor_FM), fa.moderate_academic(skor_FA), fk.high_lethargy(skor_FK))
