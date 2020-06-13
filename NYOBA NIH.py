@@ -67,9 +67,9 @@ for i in range(len(data_input)):
         valFA = data_input[i][1]
         valFK = data_input[i][2]
         print ("========================")
-        print (valFM, " ", valFA, " ", valFK)
+        
         skor_dep = fr.setRules(valFM, valFA, valFK)
-
+        print (valFM, " ", valFA, " ", valFK, "  ----> ", skor_dep)
 
     
 

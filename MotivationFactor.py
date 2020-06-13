@@ -5,16 +5,16 @@ Created on Sun May 24 19:32:32 2020
 @author: prisc
 """
 
-c_low_mo = 5 #nilai b faktor motivasi rendah
+c_low_mo = 5.5 #nilai b faktor motivasi rendah
 
-b_mod_mo = 5 #nilai b faktor motivasi sedang
-c_mod_mo = 10 #nilai c faktor motivasi sedang
+b_mod_mo = 5.5 #nilai b faktor motivasi sedang
+c_mod_mo = 9 #nilai c faktor motivasi sedang
 
-a_high_mo = 5 #nilai a faktor motivasi tinggi
-b_high_mo = 10 #nilai b faktor motivasi tinggi
+a_high_mo = 5.5 #nilai a faktor motivasi tinggi
+b_high_mo = 9 #nilai b faktor motivasi tinggi
 c_high_mo = 14 #nilai c faktor motivasi tinggi
 
-a_sev_mo = 10 #nilai a faktor motivasi sangat tinggi
+a_sev_mo = 9 #nilai a faktor motivasi sangat tinggi
 b_sev_mo = 14 #nilai b faktor motivasi sangat tinggi
 
 def low_motivation(skor_FM):
@@ -45,7 +45,7 @@ def high_motivation(skor_FM):
             mf_value = 0
         return mf_value
 
-def severe_motivation(skor_FM):
+def very_high_motivation(skor_FM):
     #for i in range(len(skor_FM)):
         if skor_FM >= a_sev_mo and skor_FM <= b_sev_mo:
             mf_value = round((skor_FM - a_sev_mo)/(b_sev_mo - a_sev_mo), 3)

@@ -19,6 +19,6 @@ def z_high (alpha):
     z = (alpha * (c_high_dep - ((c_high_dep + a_high_dep)/2))) + c_high_dep
     return z
 
-def z_severe (alpha):
+def z_very_high (alpha):
     z = (alpha * (b_sev_dep - a_sev_dep)) + a_sev_dep
     return z

@@ -43,7 +43,7 @@ def high_academic(skor_FA):
         mf_value = 0
     return mf_value
 
-def severe_academic(skor_FA):
+def very_high_academic(skor_FA):
     if skor_FA >= a_sev_ac and skor_FA <= b_sev_ac:
         mf_value = round((skor_FA - a_sev_ac)/(b_sev_ac - a_sev_ac), 3)
     else:

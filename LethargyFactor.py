@@ -6,16 +6,16 @@ Created on Mon May 25 21:38:29 2020
 """
 
 
-c_low_le = 3 #nilai c faktor lethargy rendah
+c_low_le = 4 #nilai c faktor lethargy rendah
 
-b_mod_le = 3 #nilai b faktor lethargy sedang
-c_mod_le = 6 #nilai c faktor lethargy sedang
+b_mod_le = 4 #nilai b faktor lethargy sedang
+c_mod_le = 6.5 #nilai c faktor lethargy sedang
 
-a_high_le = 3 #nilai a faktor lethargy tinggi
-b_high_le = 6 #nilai b faktor lethargy tinggi
+a_high_le = 4 #nilai a faktor lethargy tinggi
+b_high_le = 6.5 #nilai b faktor lethargy tinggi
 c_high_le = 9 #nilai c faktor lethargy tinggi
 
-a_sev_le = 6 #nilai a faktor lethargy sangat tinggi
+a_sev_le = 6.5 #nilai a faktor lethargy sangat tinggi
 b_sev_le = 9 #nilai b faktor lethargy sangat tinggi
 
 def low_lethargy(skor_FK):
@@ -43,7 +43,7 @@ def high_lethargy(skor_FK):
         mf_value = 0
     return mf_value
 
-def severe_lethargy(skor_FK):
+def very_high_lethargy(skor_FK):
     if skor_FK >= a_sev_le and skor_FK <= b_sev_le:
         mf_value = round((skor_FK - a_sev_le)/(b_sev_le - a_sev_le), 3)
     else:
