@@ -10,9 +10,11 @@ c_low_dep = 13 #titik c tingkat depresi rendah
 
 a_mod_dep = 12 #titik a tingkat depresi sedang
 c_mod_dep = 19 #titik c tingkat depresi sedang
+b_mod_dep = a_mod_dep + ((c_mod_dep - a_mod_dep)/2)
 
 a_high_dep = 18 #titik a tingkat depresi tinggi
 c_high_dep = 25 #titik c tingkat depresi tinggi
+b_high_dep = a_high_dep + ((c_high_dep - a_high_dep)/2)
 
 a_sev_dep = 24 #titik a tingkat depresi sangat tinggi
 b_sev_dep = 30 #titik c tingkat depresi sangat tinggi
@@ -25,15 +27,19 @@ def low_depression(skor_depresi):
     return mf_depresi
 
 def moderate_depression(skor_depresi):
-    if skor_depresi >= a_mod_dep and skor_depresi <= c_mod_dep:
-        mf_depresi = round((skor_depresi - c_mod_dep)/(c_mod_dep - ((c_mod_dep + a_mod_dep)/2)), 3)
+    if skor_depresi >= a_mod_dep and skor_depresi <= b_mod_dep:
+        mf_depresi = round((skor_depresi - a_mod_dep)/(b_mod_dep - a_mod_dep), 3)
+    elif skor_depresi >= b_mod_dep and skor_depresi <= c_mod_dep:
+        mf_depresi = round((c_mod_dep - skor_depresi)/(c_mod_dep - b_mod_dep), 3)
     else:
         mf_depresi = 0
     return mf_depresi
 
 def high_depression(skor_depresi):
-    if skor_depresi >= a_high_dep and skor_depresi <= c_high_dep:
-        mf_depresi = round((skor_depresi - c_high_dep)/(c_high_dep - ((c_high_dep + a_high_dep)/2)), 3)
+    if skor_depresi >= a_high_dep and skor_depresi <= b_high_dep:
+        mf_depresi = round((skor_depresi - a_high_dep)/(b_high_dep - a_high_dep), 3)
+    elif skor_depresi >= b_high_dep and skor_depresi <= c_high_dep:
+        mf_depresi = round((c_high_dep - skor_depresi)/(c_high_dep - b_high_dep), 3)
     else:
         mf_depresi = 0
     return mf_depresi

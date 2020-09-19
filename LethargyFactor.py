@@ -9,13 +9,13 @@ Created on Mon May 25 21:38:29 2020
 c_low_le = 4 #nilai c faktor lethargy rendah
 
 b_mod_le = 4 #nilai b faktor lethargy sedang
-c_mod_le = 6.5 #nilai c faktor lethargy sedang
+c_mod_le = 7 #nilai c faktor lethargy sedang
 
 a_high_le = 4 #nilai a faktor lethargy tinggi
-b_high_le = 6.5 #nilai b faktor lethargy tinggi
+b_high_le = 7 #nilai b faktor lethargy tinggi
 c_high_le = 9 #nilai c faktor lethargy tinggi
 
-a_sev_le = 6.5 #nilai a faktor lethargy sangat tinggi
+a_sev_le = 7 #nilai a faktor lethargy sangat tinggi
 b_sev_le = 9 #nilai b faktor lethargy sangat tinggi
 
 def low_lethargy(skor_FK):

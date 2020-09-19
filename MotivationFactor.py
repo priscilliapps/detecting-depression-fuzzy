@@ -5,12 +5,12 @@ Created on Sun May 24 19:32:32 2020
 @author: prisc
 """
 
-c_low_mo = 5.5 #nilai b faktor motivasi rendah
+c_low_mo = 6 #nilai b faktor motivasi rendah
 
-b_mod_mo = 5.5 #nilai b faktor motivasi sedang
+b_mod_mo = 6 #nilai b faktor motivasi sedang
 c_mod_mo = 9 #nilai c faktor motivasi sedang
 
-a_high_mo = 5.5 #nilai a faktor motivasi tinggi
+a_high_mo = 6 #nilai a faktor motivasi tinggi
 b_high_mo = 9 #nilai b faktor motivasi tinggi
 c_high_mo = 14 #nilai c faktor motivasi tinggi
 
